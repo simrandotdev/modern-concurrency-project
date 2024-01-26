@@ -1,11 +1,11 @@
 import Vapor
 
 func routes(_ app: Application) throws {
-    app.get { req async in
-        "It works!"
-    }
-
-    app.get("hello") { req async -> String in
-        "Hello, world!"
-    }
+  try Hello.routes(app)
+  try Stocked.routes(app)
+  try SuperStorage.routes(app)
+  try Blabber.routes(app)
+  try Clipper.routes(app)
+  try Gallery.routes(app)
+  try EasterEgg.routes(app)
 }
